@@ -7,43 +7,43 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-nav">
-        <a class="logo">
+      <nav class="nav">
+        <a class="nav-logo logo">
           <img src="#" alt="Логотип сайта о Седоне.">
         </a>
-        <ul class="site-navigation">
-          <li class="site-navigation-item site-navigation-current">
-            <a class="navigation-link" href="index.html">Главная</a>
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a class="nav-link" href="index.html">Главная</a>
           </li>
-          <li class="site-navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
+          <li class="nav-list-item">
+            <a class="nav-link" href="#">О Седоне</a>
           </li>
-          <li class="site-navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          <li class="nav-list-item nav-list-item-current">
+            <a class="nav-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="site-navigation-user">
-          <li class="site-navigation-user-item">
-            <a class="navigation-link link-user" href="#">
+        <ul class="nav-list-user">
+          <li class="nav-list-user-item">
+            <a class="nav-link nav-link-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="site-navigation-user-item">
-            <a class="navigation-link link-user" href="#">
+          <li class="nav-list-user-item">
+            <a class="nav-link nav-link-favorite" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
-          <li class="site-navigation-user-item">
-            <a class="navigation-user" href="#">Хочу сюда!</a>
+          <li class="nav-list-user-item">
+            <a class="nav-link button-booking" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-inner">
       <!--Блок c основной сортировкой-->
-      <div class="basic-sorting">
-        <header class="inner-header">
-          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+      <div class="filter">
+        <header class="main-inner-header">
+          <h1 class="main-inner-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
@@ -60,13 +60,13 @@
         </header>
         <section class="filter-hotel">
           <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
-          <form class="catalog-filter"
+          <form class="filter-hotel-form"
             action="https://echo.htmlacademy.ru/"
             method="get">
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Инфраструктура:</legend>
-              <ul class="catalog-filter-list">
-                <li class="catalog-filter-list-item">
+            <fieldset class="filter-hotel-type">
+              <legend class="filter-hotel-title">Инфраструктура:</legend>
+              <ul class="filter-hotel-list">
+                <li class="filter-hotel-item">
                   <label class="control">
                     <input class="control-input"
                       type="checkbox"
@@ -75,7 +75,7 @@
                     Бассейн
                   </label>
                 </li>
-                <li class="catalog-filter-list-item">
+                <li class="filter-hotel-item">
                   <label class="control">
                     <input class="control-input"
                       type="checkbox"
@@ -84,7 +84,7 @@
                     Парковка
                   </label>
                 </li>
-                <li class="catalog-filter-list-item">
+                <li class="filter-hotel-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="wi-fi" />
                     Wi-Fi
@@ -92,10 +92,10 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип жилья:</legend>
-              <ul class="catalog-filter-list">
-                <li class="catalog-filter-list-item">
+            <fieldset class="filter-hotel-type">
+              <legend class="filter-hotel-title">Тип жилья:</legend>
+              <ul class="filter-hotel-list">
+                <li class="filter-hotel-item">
                   <label class="control">
                     <input class="control-input"
                       type="radio"
@@ -105,7 +105,7 @@
                     Отель
                   </label>
                 </li>
-                <li class="catalog-filter-list-item">
+                <li class="filter-hotel-item">
                   <label class="control">
                     <input class="control-input"
                       type="radio"
@@ -114,7 +114,7 @@
                     Мотель
                   </label>
                 </li>
-                <li class="catalog-filter-list-item">
+                <li class="filter-hotel-item">
                   <label class="control">
                     <input class="control-input"
                       type="radio"
@@ -125,9 +125,9 @@
                 </li>
               </ul>
             </fieldset>
-            <div class="apply-and-reset-buttons-in-sorting">
-              <button class="button-apply" type="submit">Применить</button>
-              <button class="button-reset" type="reset">Сбросить</button>
+            <div class="filter-button">
+              <button class="filter-button-apply" type="submit">Применить</button>
+              <button class="filter-button-reset" type="reset">Сбросить</button>
             </div>
           </form>
         </section>
@@ -135,19 +135,19 @@
       <!-- Блок еще с сортировкой по популярности и формой вывода на экран-->
       <section class="assortment-hotel">
         <h2 class="visually-hidden">Сортировка гостиниц</h2>
-        <p class="result">Найдено гостиниц: 38</p>
-        <select class="select-control" aria-label="Сортировка">
+        <p class="assortment-hotel-text">Найдено гостиниц: 38</p>
+        <select class="assortment-hotel-select" aria-label="Сортировка">
           <option value="popular">Сначала популярные</option>
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
-        <a class="button button-cards" href="#">
+        <a class="assortment-hotel-button-cards" href="#">
           <span class="visually-hidden">Показать в виде карточек</span>
         </a>
-        <a class="button button-screen" href="#">
+        <a class="assortment-hotel-button-screen" href="#">
           <span class="visually-hidden">Показать на весь экран</span>
         </a>
-        <a class="button button-list" href="#">
+        <a class="assortment-hotel-button-list" href="#">
           <span class="visually-hidden">Показать списком</span>
         </a>
       </section>
@@ -300,34 +300,36 @@
         </form>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="footer">
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="button-social-item"
+          <a class="footer-social-link"
             href="https://vk.com/htmlacademy"
             title="Вконтакте">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="button-social-item"
+          <a class="footer-social-link"
             href="https://t.me/htmlacademy"
             title="Телеграм">
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="button-social-item"
+          <a class="footer-social-link"
             href="https://www.youtube.com/user/htmlacademyru"
             title="Ютуб">
             <span class="visually-hidden">Ютуб</span>
           </a>
         </li>
       </ul>
-      <a class="telephone" href="tel:+78128121212">+7 812 812-12-12</a>
-      <a class="logo_htmlacademy" href="https://htmlacademy.ru/">
-        <img src="#" alt="Логотип html academy.">
+      <a class="footer-telephone-link" href="tel:+78128121212">+7 812 812-12-12</a>
+      <a class="footer-logo-htmlacademy" href="https://htmlacademy.ru/">
+        <img class="footer-img-htmlacademy" src="#" alt="Логотип html academy.">
       </a>
     </footer>
+  </body>
+</html>
   </body>
 </html>
