@@ -34,8 +34,19 @@ body {
   background-color: #FFFFFF;
   text-decoration: none;
   text-align: center;
+  text-transform: capitalize;
 }
+/* кнопка хочу сюда */
+.button-booking {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color:#756157 ;
+}
+
 /* попробывал скомпонавать 3 изображения */
+/* изображение гор */
 .welcome-plate {
   position: relative;
   background-image: url("/images/welcome/index-background.jpg");
@@ -44,15 +55,18 @@ body {
   background-color: #FFFFFF;
   background-repeat: no-repeat;
 }
+/* приветственный текс седоны */
 .welcome-plate-text {
   margin-left: 371px;
   margin-top: 51px;
 }
+/* нижний разделитель */
 .welcome-plate-divider {
     position: absolute;
     bottom: 0;
     left: 0;
 }
+/* блок о седоне */
 .about {
   background-color: #FFFFFF;
 }
@@ -196,3 +210,118 @@ text-align: center;
   text-decoration: none;
   color: #000000;
   }
+/*заголовок гостиницы Седоны */
+.main-inner-title {
+  font-size: 60px;
+  line-height: 78px;
+  color: #FFFFFF;
+  background-color: #000000;
+}
+/* хлебная крошка гостиницы */
+.breadcrumbs-item-hotels {
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: #000000;
+}
+/* заголовки списков в фильтре */
+.filter-hotel-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #000000;
+  text-transform: capitalize;
+}
+/* списки в фильтре */
+.filter-hotel-item {
+color: #FFFFFF;
+background-color: #000000;
+}
+/* кнопки в фильтре */
+.filter-button {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #000000;
+}
+/* кнопка применить */
+.filter-button-apply {
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #82B3D3;
+}
+/* результат поиска */
+.assortment-hotel-text {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+/* селекты в каталоге- они одинаковые по оформлению текста*/
+.select {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+/* Названия гостиниц */
+.hotel-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+/* гостиница-цена */
+.hotel-price {
+  color: #333333;
+}
+/* кнопки в карточке отелей */
+.hotel-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background-color: #756157;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+/* кнопка избранное */
+.hotel-button-favorites {
+  background-color: #82B3D3;
+}
+/* кнопка в избранном */
+.hotel-button-in-favorites {
+background-color: #7DB54F;
+}
+/* текс рейтинга */
+.hotel-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+}
+/* ссылки в пагинации */
+.pagination-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+/* пагинация текущей страницы */
+.pagination-link-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+/* текст количество гостиниц на странице */
+.hotel-number-text {
+  color: #333333;
+}
+
