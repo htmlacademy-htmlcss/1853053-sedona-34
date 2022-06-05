@@ -49,7 +49,7 @@ body {
   background-image: url("../images/welcome/index-background.jpg");
   width: 1200px;
   height: 485px;
-  background-color: #FFFFFF;
+  background-color: #32728C;
   background-repeat: no-repeat;
 }
 /* приветственный текс седоны */
@@ -167,6 +167,7 @@ text-transform: uppercase;
 .newsletter-background {
   background-image: url(../images/newsletter-background.jpg);
   color: #FFFFFF;
+  background-color: #32728C;
 }
 /* Призыв подписаться c фоновым изображением */
 .newsletter-title-background {
@@ -197,42 +198,35 @@ text-transform: uppercase;
   text-decoration: none;
   color: #000000;
   }
+  /* блок фильтр в каталоге */
+  .filter{
+    background-image: url(../images/filtr/catalog-background.jpg);
+    background-color: #32728C;
+    color: #FFFFFF;
+  }
 /*заголовок гостиницы Седоны */
 .main-inner-title {
   font-size: 60px;
   line-height: 78px;
-  color: #FFFFFF;
-  background-color: #000000;
 }
 /* хлебная крошка гостиницы */
 .breadcrumbs-item {
   font-size: 16px;
   line-height: 21px;
-  color: #FFFFFF;
-  background-color: #000000;
 }
 /* заголовки списков в фильтре */
 .filter-hotel-title {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  color: #FFFFFF;
-  background-color: #000000;
   text-transform: capitalize;
-}
-/* списки в фильтре */
-.filter-hotel-item {
-color: #FFFFFF;
-background-color: #000000;
 }
 /* кнопки в фильтре */
 .filter-button {
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
   color: #FFFFFF;
-  background-color: #000000;
 }
 /* кнопка применить */
 .filter-button-apply {
