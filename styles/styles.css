@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: ("../fonts/ptsans-400.woff2") format("woff2");
+  src:("../fonts/ptsans-400.woff2") format("woff2");
   display: swap;
 }
 @font-face {
@@ -21,17 +21,14 @@ body {
 }
 /*фон и цвет текста для шапки*/
 .main-header {
-  color: #000000;
   background-color: #FFFFFF;
 }
 /*список ссылок в навигации*/
 .nav-link {
-  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   color: #000000;
-  background-color: #FFFFFF;
   text-decoration: none;
   text-align: center;
   text-transform: capitalize;
@@ -49,7 +46,7 @@ body {
 /* изображение гор */
 .welcome-plate {
   position: relative;
-  background-image: url("/images/welcome/index-background.jpg");
+  background-image: url("../images/welcome/index-background.jpg");
   width: 1200px;
   height: 485px;
   background-color: #FFFFFF;
@@ -69,6 +66,7 @@ body {
 /* блок о седоне */
 .about {
   background-color: #FFFFFF;
+  text-align: center;
 }
 /* описание Седоны */
 .about-text-description {
@@ -76,27 +74,19 @@ font-weight: 700;
 font-style: normal;
 font-size: 30px;
 line-height: 36px;
-color: #000000;
 text-transform: uppercase;
-text-align: center;
 }
 /* предложение рассмотреть причины почему Седона круче */
 .about-text-offer {
-  font-weight: 400;
-  font-style: normal;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  text-align: center;
 }
 /*блок с преемуществами */
 .features-content {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
+  text-align: center;
   color: #333333;
   background-color: rgba(131, 179, 211, 0.12);
-  text-align: center;
 }
 /* заголовки блока преемуществ */
 .features-title {
@@ -123,21 +113,22 @@ text-align: center;
 .features-content-road {
   background-color: rgba(131, 179, 211, 0.2);
 }
+/* блок поиска гостиниц */
+.search-hotel {
+  text-align: center;
+}
 /* вопрос Заинтеросавились? */
 .search-hotel-question {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
 }
 /* текст после вопроса Заинтересовались */
 .search-hotel-content {
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  text-align: center;
 }
 /* кнопка поиска гостиницы-она же ссылка */
 .search-hotel-button {
@@ -150,8 +141,7 @@ text-align: center;
   background-color: #756157;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
-}
+  }
 /* блок с формой  подпиской  */
 .newsletter {
   width: 1200px;
@@ -161,7 +151,7 @@ text-align: center;
   text-align: center;
 }
 /* Призыв подписаться */
-.newsletter-call {
+.newsletter-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -179,7 +169,7 @@ text-align: center;
   color: #FFFFFF;
 }
 /* Призыв подписаться c фоновым изображением */
-.newsletter-call-background {
+.newsletter-title-background {
   color: #FFFFFF;
 }
 /* инпут в форме подписки */
@@ -192,7 +182,6 @@ text-align: center;
 }
 /* кнопка подписаться */
 .newsletter-button {
-  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -202,8 +191,6 @@ text-align: center;
 }
 /* телефон */
 .footer-telephone-link {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
@@ -218,7 +205,7 @@ text-align: center;
   background-color: #000000;
 }
 /* хлебная крошка гостиницы */
-.breadcrumbs-item-hotels {
+.breadcrumbs-item {
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
@@ -240,7 +227,6 @@ background-color: #000000;
 }
 /* кнопки в фильтре */
 .filter-button {
-  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -263,10 +249,7 @@ background-color: #000000;
 }
 /* селекты в каталоге- они одинаковые по оформлению текста*/
 .select {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
   font-size: 18px;
-  line-height: 21px;
   color: #333333;
 }
 /* Названия гостиниц */
@@ -312,6 +295,7 @@ background-color: #7DB54F;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   color: #FFFFFF;
   background-color: #82B3D3;
 }
