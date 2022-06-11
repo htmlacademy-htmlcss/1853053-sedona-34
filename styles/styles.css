@@ -12,16 +12,43 @@
   src: ("../fonts/ptsans-700.woff2") format("woff2");
   display: swap;
 }
+html {
+  height: 100%;
+}
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   background-color: #FFFFFF;
   color: #000000;
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page-center-container {
+  width: 1200px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
+}
+.main-container {
+  flex-grow: 1;
 }
 /*фон и цвет текста для шапки*/
 .main-header {
   background-color: #FFFFFF;
+}
+/* навигация в шапке */
+.nav {
+  display: flex;
+}
+/* логотип в шапке */
+.logo {
+  width: 139px;
+  margin-left: 70px;
+  margin-right: 30px;
+  padding: 0;
 }
 /*список ссылок в навигации*/
 .nav-link {
@@ -32,6 +59,31 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: capitalize;
+  }
+/* список навигации слева */
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 345px;
+  padding: 0;
+  list-style-type: none;
+}
+/* элемент списка */
+.nav-list-item {
+  margin-right: 34px;
+}
+/* список навигации справа */
+.nav-list-user {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 264px;
+  padding: 0;
+  margin: 0;
+  margin-right: 70px;
+  margin-left: auto;
+  list-style-type: none;
 }
 /* кнопка хочу сюда */
 .button-booking {
@@ -302,4 +354,3 @@ background-color: #7DB54F;
 .hotel-number-text {
   color: #333333;
 }
-
