@@ -69,7 +69,7 @@ body {
   padding: 0;
   list-style-type: none;
 }
-/* элемент списка */
+/* элемент списка слева*/
 .nav-list-item {
   margin-right: 34px;
 }
@@ -94,7 +94,7 @@ body {
   background-color:#756157 ;
 }
 
-/* попробывал скомпонавать 3 изображения */
+/* приветствие Седоны */
 /* изображение гор */
 .welcome-plate {
   position: relative;
