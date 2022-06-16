@@ -2,14 +2,14 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src:("../fonts/ptsans-400.woff2") format("woff2");
+  src:("/fonts/ptsans-400.woff2") format("woff2");
   display: swap;
 }
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: ("../fonts/ptsans-700.woff2") format("woff2");
+  src: ("/fonts/ptsans-700.woff2") format("woff2");
   display: swap;
 }
 html {
@@ -146,6 +146,7 @@ body {
   height: 485px;
   background-color: #32728C;
   background-repeat: no-repeat;
+  margin-bottom: 63px;
 }
 /* приветственный текс седоны */
 .welcome-plate-text {
@@ -162,6 +163,9 @@ body {
 .about {
   background-color: #FFFFFF;
   text-align: center;
+  width: 654px;
+  margin: 0 auto;
+  margin-bottom: 90px;
 }
 /* описание Седоны */
 .about-text-description {
@@ -170,12 +174,17 @@ font-style: normal;
 font-size: 30px;
 line-height: 36px;
 text-transform: uppercase;
+text-align: center;
+width: 620px;
+margin: 0 auto;
+margin-bottom: 31px;
 }
 /* предложение рассмотреть причины почему Седона круче */
 .about-text-offer {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin: 0;
 }
 /*блок с преемуществами */
 .features-content {
