@@ -163,8 +163,7 @@ body {
 .about {
   background-color: #FFFFFF;
   text-align: center;
-  width: 654px;
-  margin: 0 auto;
+  padding: 0 273px;
   margin-bottom: 90px;
 }
 /* описание Седоны */
@@ -175,8 +174,7 @@ font-size: 30px;
 line-height: 36px;
 text-transform: uppercase;
 text-align: center;
-width: 620px;
-margin: 0 auto;
+margin: 0;
 margin-bottom: 31px;
 }
 /* предложение рассмотреть причины почему Седона круче */
@@ -186,11 +184,18 @@ margin-bottom: 31px;
   color: #333333;
   margin: 0;
 }
-/*блок с преемуществами */
+/* блок с преемуществами */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*содержимое блока с преемуществами */
 .features-content {
   text-align: center;
   color: #333333;
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 384px;
 }
 /* заголовки блока преемуществ */
 .features-title {
@@ -199,6 +204,11 @@ margin-bottom: 31px;
   line-height: 28px;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
+}
+/* текст блока преемуществ */
+.features-text {
+  margin: 0;
 }
 /* блоки преемущест с фото */
 .features-content-with-photo {
@@ -220,6 +230,43 @@ margin-bottom: 31px;
 /* блок поиска гостиниц */
 .search-hotel {
   text-align: center;
+}
+/* флекс контейнеры внутри блоков преемуществ */
+.features-content-flex {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  padding: 102px 85px;
+  gap: 30px;
+}
+/* флекс-контейнеры с фото */
+.features-content-flex-photo {
+  padding: 92px 85px;
+}
+/* флекс-контейнеры с иконками */
+.features-content-flex-icon {
+  padding: 182px 85px 82px;
+}
+/* иконка с домиком */
+.icon-house {
+  background-image: url(../images/about/housing.svg);
+  background-repeat: no-repeat;
+  background-position-y: 80px;
+  background-position-x: 162px;
+}
+/* иконка еды */
+.icon-burger {
+  background-image: url(../images/about/eating.svg);
+  background-repeat: no-repeat;
+  background-position-y: 81px;
+  background-position-x: 163px;
+}
+/* иконка сувенира */
+.icon-gift-box {
+  background-image: url(../images/about/souvenir.svg);
+  background-repeat: no-repeat;
+  background-position-y: 78px;
+  background-position-x: 168px;
 }
 /* вопрос Заинтеросавились? */
 .search-hotel-question {
