@@ -534,14 +534,57 @@ margin-bottom: 31px;
   font-size: 18px;
   color: #333333;
 }
+/* блок с карточками товаров */
+.hotel {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+/* список карточек гостиниц */
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  row-gap: 0;
+  column-gap: 18px;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 96px;
+  padding: 0;
+}
+/* фото гостиниц */
+.hotel-img {
+  min-width: 299px;
+  object-fit: contain;
+}
+/* элемент списка-карточка товара */
+.hotel-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
 /* Названия гостиниц */
 .hotel-title {
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
+  margin-bottom: 16px;
 }
 /* гостиница-цена */
 .hotel-price {
+  display: flex;
+  gap: 20px;
   color: #333333;
+  margin-bottom: 16px;
+}
+/* текст в прайсе */
+.hotel-price-content {
+  min-width: 140px;
+}
+/* блок с кнопками в карточке товара */
+.hotel-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
 }
 /* кнопки в карточке отелей */
 .hotel-button {
@@ -569,6 +612,34 @@ background-color: #7DB54F;
   text-transform: uppercase;
   text-align: center;
   color: #333333;
+  margin: 0;
+}
+/*  звезды */
+.star {
+  background-image: url(../images/filtr/star.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 17px;
+}
+/* блок со звездами */
+.stars {
+  display: flex;
+  gap: 6px;
+}
+/* блок рейтинга со звездами */
+.hotel-stars {
+  display: flex;
+  justify-content: space-between;
+}
+/* Блок пагинации */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 1056px;
+  margin: 0 auto;
+}
+.pagination-list {
+  display: flex;
 }
 /* ссылки в пагинации */
 .pagination-link {
