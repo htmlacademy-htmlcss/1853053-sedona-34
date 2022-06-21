@@ -268,6 +268,11 @@ margin-bottom: 31px;
   background-position-y: 78px;
   background-position-x: 168px;
 }
+/* блок с поиском гостиницы*/
+.search-hotel {
+  margin-bottom: 93px;
+}
+
 /* вопрос Заинтеросавились? */
 .search-hotel-question {
   font-weight: 700;
@@ -293,7 +298,6 @@ margin-bottom: 31px;
   width: 574px;
   padding: 12px 15px;
   margin: 0 auto;
-  margin-bottom: 93px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -305,8 +309,8 @@ margin-bottom: 31px;
   }
 /* блок с формой  подпиской  */
 .newsletter {
-  width: 1200px;
-  height: 411px;
+  padding: 94px 200px;
+  box-sizing: border-box;
   color: #333333;
   background-color: #FFFFFF;
   text-align: center;
@@ -318,21 +322,24 @@ margin-bottom: 31px;
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
-  padding-top: 94px;
-  padding-bottom: 29px;
-  min-width: 720px;
+  margin: 0;
+  margin-bottom: 29px;
 }
+
+
 /* Обещантие что никакого спама */
 .newsletter-text {
   font-size: 22px;
   line-height: 26px;
   min-height: 52px;
   margin: 0;
-  padding: 0 363px 46px;
+  margin-bottom: 45px;
+padding: 0 163px;
 }
 /* блок с формой подпиской с фоновым изображением */
 .newsletter-background {
   background-image: url(../images/newsletter-background.jpg);
+  background-repeat: no-repeat;
   color: #FFFFFF;
   background-color: #32728C;
 }
@@ -350,7 +357,7 @@ margin-bottom: 31px;
 }
 /* форма в блоке подписки */
 .newsletter-form {
-  margin-bottom: 29px;
+  margin-bottom: 0;
 }
 /* кнопка подписаться */
 .newsletter-button {
@@ -365,7 +372,7 @@ margin-bottom: 31px;
 .footer {
   display: flex;
   justify-content: space-between;
-  min-height: 120px;
+  padding: 0 70px;
 }
 /* список с социальными списками */
 .footer-social-list {
@@ -375,7 +382,6 @@ margin-bottom: 31px;
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-left: 70px;
   max-width: 142px;
 }
 /* пункты социальных ссылок */
@@ -400,7 +406,6 @@ margin-bottom: 31px;
   /* логотип HTMLacademy */
   .footer-logo-htmlacademy {
     margin-top: 48px;
-    margin-right: 70px;
     margin-bottom: 38px;
   }
   /* блок фильтр в каталоге */
