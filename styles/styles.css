@@ -158,9 +158,8 @@ body {
 }
 /* приветственный текс седоны */
 .welcome-plate-text {
-  display: block;
-  padding: 51px;
-  margin: 0 auto;
+  margin-left: 371px;
+  margin-top: 51px;
 }
 /* нижний разделитель */
 .welcome-plate-divider {
@@ -201,6 +200,8 @@ margin-bottom: 31px;
 }
 /*содержимое блока с преемуществами */
 .features-content {
+  box-sizing: border-box;
+  padding: 103px 85px 102px;
   text-align: center;
   color: #333333;
   background-color: rgba(131, 179, 211, 0.12);
@@ -215,15 +216,22 @@ margin-bottom: 31px;
   color: #000000;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 30px;
 }
 /* текст блока преемуществ */
 .features-text {
   margin: 0;
+  margin-top: 30px;
 }
 /* блоки преемущест с фото */
 .features-content-with-photo {
   color: #FFFFFF;
   background-color: #82B3D3;
+  padding: 92px 85px;
+}
+/*блок преемуществ с иконками */
+.features-content-with-icon {
+  padding: 182px 85px 81px;
 }
 /* заголовки блока преемуществ с фото */
 .features-title-with-photo {
@@ -237,22 +245,7 @@ margin-bottom: 31px;
 .search-hotel {
   text-align: center;
 }
-/* флекс контейнеры внутри блоков преемуществ */
-.features-content-flex {
-  display: flex;
-  flex-direction: column;
-  width: 230px;
-  padding: 102px 85px;
-  gap: 30px;
-}
-/* флекс-контейнеры с фото */
-.features-content-flex-photo {
-  padding: 92px 85px;
-}
-/* флекс-контейнеры с иконками */
-.features-content-flex-icon {
-  padding: 182px 85px 82px;
-}
+
 /* иконка с домиком */
 .icon-house {
   background-image: url(../images/about/housing.svg);
