@@ -456,6 +456,7 @@ padding: 0 163px;
   min-height: 149px;
   gap: 70px;
 }
+
 /* fieldset в сортировке */
 .filter-hotel-type {
   margin: 0;
@@ -494,12 +495,17 @@ padding: 0 163px;
   min-width: 160px;
   min-height: 48px;
 }
+/* блок главной сортировки */
+.main-sorting {
+  padding: 50px 72px ;
+  margin-bottom: 25px;
+}
 /* секция с сортировкой по популярности и формой вывода на экран */
 .assortment-hotel {
   display: flex;
   justify-content: space-between;
   min-height: 49px;
-  padding-top: 50px;
+  margin-bottom: 56px;
 }
 /* результат поиска */
 .assortment-hotel-text {
@@ -508,7 +514,6 @@ padding: 0 163px;
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  margin-left: 72px;
 }
 .assortment-hotel-button-flex {
   display: flex;
@@ -530,11 +535,7 @@ padding: 0 163px;
   font-size: 18px;
   color: #333333;
 }
-/* блок с карточками товаров */
-.hotel {
-  padding-left: 72px;
-  padding-right: 72px;
-}
+
 /* список карточек гостиниц */
 .hotel-list {
   display: grid;
