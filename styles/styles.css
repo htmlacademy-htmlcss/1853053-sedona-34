@@ -39,8 +39,6 @@ body {
 }
 .page-center-container {
   width: 1200px;
-  padding-left: 40px;
-  padding-right: 40px;
   margin: 0 auto;
   background-color: #FFFFFF;
 }
@@ -60,10 +58,10 @@ body {
 /* логотип в шапке */
 .logo {
   position: relative;
-  padding: 0;
-  left: 0;
-  top: 0;
   z-index: 1;
+  width: 139px;
+  height: 70px;
+  margin-right: 47px;
 }
 /* изображение логотипа */
 .img-logo {
@@ -88,7 +86,6 @@ body {
   max-width: 400px;
   padding: 0;
   margin: 0;
-  margin-left: 239px;
   list-style-type: none;
 }
 /* элемент списка слева*/
@@ -96,7 +93,12 @@ body {
   margin-right: 34px;
 }
 /* активное состояние когда юзер находится на странице */
-.nav-list-item-current {
+.nav-list-item-current{
+  position: relative;
+}
+.nav-list-item-current::after {
+  content: "";
+  display: block;
   border-bottom: 2px solid #756257;
 }
 /* список навигации справа */
@@ -158,8 +160,11 @@ body {
 }
 /* приветственный текс седоны */
 .welcome-plate-text {
-  margin-left: 371px;
-  margin-top: 51px;
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+  padding-top: 51px;
+  margin: 0 auto;
 }
 /* нижний разделитель */
 .welcome-plate-divider {
@@ -218,10 +223,14 @@ margin-bottom: 31px;
   margin: 0;
   margin-bottom: 30px;
 }
+/* спани внутри блоков преемуществ */
+.features-content span {
+  display: block;
+  margin-bottom: 30px;
+}
 /* текст блока преемуществ */
 .features-text {
   margin: 0;
-  margin-top: 30px;
 }
 /* блоки преемущест с фото */
 .features-content-with-photo {
@@ -373,6 +382,8 @@ padding: 0 163px;
   display: flex;
   justify-content: space-between;
   padding: 0 70px;
+  height: 120px;
+  align-items: center;
 }
 /* список с социальными списками */
 .footer-social-list {
@@ -400,15 +411,8 @@ padding: 0 163px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-  margin-top: 45px;
-  margin-bottom: 35px;
-  }
-  /* логотип HTMLacademy */
-  .footer-logo-htmlacademy {
-    margin-top: 48px;
-    margin-bottom: 38px;
-  }
-  /* блок фильтр в каталоге */
+}
+ /* блок фильтр в каталоге */
   .filter{
     background-image: url(../images/filtr/catalog-background.jpg);
     background-repeat: no-repeat;
