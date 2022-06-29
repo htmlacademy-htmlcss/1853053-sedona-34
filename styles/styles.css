@@ -146,7 +146,18 @@ body {
   width: 160px;
   text-align: center;
 }
-
+/* кнопки 1 типа- они коричневые-состояния наведение,фокуса */
+.button-first:hover,
+.button-first:focus{
+background-color: #615048;
+}
+/* состояние нажатия */
+.button-first:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.button-first:disabled {
+  background-color: #E5E5E5;
+}
 /* приветствие Седоны */
 /* изображение гор */
 .welcome-plate {
@@ -363,9 +374,16 @@ padding: 0 163px;
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
+  flex-grow: 1;
+  padding: 0;
+  padding-left: 22px;
+  border: 0;
+  border-radius: 10px 0 0 10px;
 }
 /* форма в блоке подписки */
 .newsletter-form {
+  display: flex;
+  height: 60px;
   margin-bottom: 0;
 }
 /* кнопка подписаться */
@@ -376,6 +394,21 @@ padding: 0 163px;
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #82B3D3;
+  width: 200px;
+  padding: 0;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+}
+/* кнопки второго типа-они голубые-их состояния */
+.button-second:hover,
+.button-second:focus {
+  background-color:#68A2CA;
+}
+.button-second:active {
+color: rgba(255, 255, 255, 0.3);
+}
+.button-second:disabled {
+  background-color: #E5E5E5;
 }
 /* подвал */
 .footer {
@@ -404,6 +437,18 @@ padding: 0 163px;
   width: 47px;
   height: 40px;
 }
+/* состояние покоя  */
+.footer-social-link {
+  color: #83B3D3;
+}
+/* состояние наведения и фокуса */
+.footer-social-link:hover,
+.footer-social-link:focus{
+  color: #68A2CA;
+}
+.footer-social-link:active {
+  color: rgba(104, 162, 202, 0.3);
+}
 /* телефон */
 .footer-telephone-link {
   font-size: 40px;
@@ -411,6 +456,25 @@ padding: 0 163px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.footer-telephone-link:hover,
+.footer-telephone-link:focus {
+  color: rgba(117, 97, 87, 1);
+}
+.footer-telephone-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+/* логотип HTML */
+.footer-logo-htmlacademy {
+  color:rgba(0, 0, 0, 1) ;
+}
+.footer-logo-htmlacademy:hover,
+.footer-logo-htmlacademy:focus {
+color: rgba(117, 97, 87, 1);
+}
+.footer-logo-htmlacademy:active {
+  color:rgba(117, 97, 87, 0.3) ;
 }
  /* блок фильтр в каталоге */
   .filter{
@@ -498,6 +562,13 @@ padding: 0 163px;
   background-color: #82B3D3;
   min-width: 160px;
   min-height: 48px;
+  border: none;
+  border-radius: 4px;
+}
+/* кнопка сбросить */
+.filter-button-reset {
+  background: inherit;
+  border: none;
 }
 /* блок главной сортировки */
 .main-sorting {
@@ -524,16 +595,25 @@ padding: 0 163px;
   gap: 8px;
   margin-left: 78px;
 }
-/* секция с выбором показа на экран */
+/* секция с выбором показа на экран-состояние покоя */
 .assortment-hotel-button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 48px;
   height: 48px;
-  border: 2px solid #000000;
+  border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
 }
+/* состояния */
+.assortment-hotel-button:hover,
+.assortment-hotel-button:active{
+  border: 2px solid rgba(0, 0, 0, 1);
+}
+.assortment-hotel-button:focus {
+  border: 2px solid rgba(104, 162, 202, 1);
+}
+
 /* селекты в каталоге- они одинаковые по оформлению текста*/
 .select {
   font-size: 18px;
@@ -597,6 +677,10 @@ padding: 0 163px;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+  width: 140px;
+  padding: 9px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 /* кнопка избранное */
 .hotel-button-favorites {
@@ -605,6 +689,16 @@ padding: 0 163px;
 /* кнопка в избранном */
 .hotel-button-in-favorites {
 background-color: #7DB54F;
+}
+.hotel-button-in-favorites:hover,
+.hotel-button-in-favorites:focus {
+  background-color: #6C9E42;
+}
+.hotel-button-in-favorites:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.hotel-button-in-favorites:disabled {
+  background-color: #E5E5E5;
 }
 /* текс рейтинга */
 .hotel-rating {
@@ -647,7 +741,7 @@ background-color: #7DB54F;
 .pagination-item:not(:last-child) {
     margin-right: 8px;
 }
-/* ссылки в пагинации */
+/* ссылки в пагинации-состояние покоя*/
 .pagination-link {
   display: block;
   box-sizing: border-box;
@@ -664,12 +758,23 @@ background-color: #7DB54F;
   padding: 12px 25px;
   border-radius: 4px;
   }
+  /* состояния */
+.pagination-link:hover,
+.pagination-link:focus {
+  background-color: #68A2CA;;
+}
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
 /* 10 в пагинации */
 .pagination-link:last-child {
   padding: 12px 18px;
 }
 /* пагинация текущей страницы */
-.pagination-link-current {
+.pagination-link-current,
+.pagination-link-current:hover,
+.pagination-link-current:focus,
+.pagination-link-current:active{
   color: #000000;
   background-color: #F2F2F2;
 }
