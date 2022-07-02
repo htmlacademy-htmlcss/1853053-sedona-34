@@ -513,9 +513,14 @@ color: rgba(117, 97, 87, 1);
   text-transform: capitalize;
   margin-bottom: 30px;
 }
+/* филдсеты в фильтре */
+.filter-hotel-type {
+  border: none;
+}
 /*  форма в фильтре */
 .filter-hotel-form {
   display: flex;
+  justify-content: space-between;
 }
 /* две колонки сортировки по типу гостиниц */
 .filter-hotel-type-flex {
@@ -524,7 +529,72 @@ color: rgba(117, 97, 87, 1);
   min-height: 149px;
   gap: 70px;
 }
+/* range-слайдер */
+/* секция слайдера */
+.range {
+  width: 288px;
+}
+/* название */
+.filter-hotel-title-range {
+  padding: 0;
+  margin-bottom: 55px;
+}
+/* обертка с инпутами */
+.range-wrapper-inputs {
+  margin-bottom: 20px;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  height: 48px;
+}
+/* сами инпуты */
+.range-input {
+  width: 90px;
+  font: inherit;
+  padding: 0;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: none;
+  appearance: textfield;
+}
+/* лейблы */
+.range-label {
+  color: rgba(255, 255, 255, 0.3);
+  height: 48px;
+}
 
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color:  rgba(255, 255, 255, 0.3);
+}
+.range-bar {
+  position: absolute;
+  background-color:  #FFFFFF;
+  height: 4px;
+
+}
+/* кнопки range-слайдера */
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+}
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+.toggle-max {
+  top: -8px;
+  right: 78px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
 /* fieldset в сортировке */
 .filter-hotel-type {
   margin: 0;
