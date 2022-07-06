@@ -267,5 +267,76 @@
         </a>
       </footer>
     </div>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-hotel-booking">
+        <button class="modal-close-button">
+          <span class="visually-hidden"> Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="hotel-booking-form" action="htttp://echo.htmlacademy.ru/"
+          method="post">
+          <p class="field-group">
+            <label class="label-booking"" for="booking-arrival">Дата заезда:</label>
+            <input class="form-booking-field field"  type="text"
+            id="booking-arrival" name="booking-arrival"
+            placeholder="Укажите дату">
+            <span class="calendar">
+            </span>
+            </p>
+          <p class="field-group">
+            <label class="label-booking" for="booking-departure">Дата выезда:</label>
+            <input class="form-booking-field field"  type="text"
+            id="booking-departure" name="booking-departure"
+            placeholder="Укажите дату">
+            <span class="calendar">
+            </span>
+          </p>
+          <div class="booking-number-of-entrants">
+            <p class="field-group">
+              <label class="label-booking"  for="booking-adults">Взрослые:</label>
+
+              <button class="button-minus button">
+                <svg class="minus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black"/>
+                  </svg>
+              </button>
+              <input class="form-number-field"  type="text"
+              id="booking-adults" name="booking-adults"
+              placeholder="0">
+              <button class="button-plus button">
+                <svg class="plus" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.3">
+                  <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black"/>
+                  </g>
+                  </svg>
+             </button>
+
+             </p>
+            <p class="field-group">
+              <label  class="label-booking" for="booking-children">Взрослые:</label>
+
+              <button class="button-minus button">
+                <svg class="plus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black"/>
+                  </svg>
+              </button>
+              <input class="form-number-field"  type="text"
+              id="booking-children" name="booking-children"
+              placeholder="0">
+              <button class="button-plus button">
+                <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.3">
+                  <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black"/>
+                  </g>
+                  </svg>
+                </button>
+             </p>
+          </div>
+          <button class="search-button-modal">Найти</button>
+        </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

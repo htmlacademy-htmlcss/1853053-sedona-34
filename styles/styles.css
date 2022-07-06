@@ -776,6 +776,24 @@ background-image: url(/images/filtr/tick-checkbox-2.svg);
   text-transform: uppercase;
   margin: 0;
 }
+/* селекты в каталоге- они одинаковые по оформлению текста*/
+.select {
+  font-size: 18px;
+  color: #333333;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  appearance: none;
+  padding: 14px 79px 14px 20px;
+  background-image: url(/images/hotels/arrow-to-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+.assortment-hotel-select {
+  width: 290px;
+}
+.hotel-number-select {
+  width: 160px;
+}
 .assortment-hotel-button-flex {
   display: flex;
   gap: 8px;
@@ -799,13 +817,6 @@ background-image: url(/images/filtr/tick-checkbox-2.svg);
 .assortment-hotel-button:focus {
   border: 2px solid rgba(104, 162, 202, 1);
 }
-
-/* селекты в каталоге- они одинаковые по оформлению текста*/
-.select {
-  font-size: 18px;
-  color: #333333;
-}
-
 /* список карточек гостиниц */
 .hotel-list {
   display: grid;
@@ -967,9 +978,174 @@ background-color: #7DB54F;
 /* текст количество гостиниц на странице */
 .hotel-number-text {
   color: #333333;
+  margin-right: 51px;
 }
 /* количество гостиниц на странице */
 .hotel-number {
   display: flex;
+}
+/* модальное окно */
+/* модальный контейнер где находится модальное окно */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+/* модальное окно */
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 70px;
+  padding-top: 62px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px
+}
+/* тоже самое окно только с другим названием класса */
+.modal-hotel-booking {
+  width: 575px;
+}
+/* крестик для закрытия окна */
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background-color: #f2f2f2;
+  border: none;
+  background-image: url(/images/modal/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+/* состояние наведения */
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+/* состояние фокуса */
+.modal-close-button:focus {
+ background-color: #E6E6E6;
+ outline: 3px solid #83B3D3;
+}
+/* состояние нажатия */
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  opacity: 0.3;
+}
+/* заголовок модального окна */
+.modal-title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.modal-container-close {
+  display: none;
+}
+/* секция с формами указания количества въезжающих */
+.booking-number-of-entrants {
+  display: flex;
+  width: 575px;
+}
+/* параграфы в модальном окне */
+.hotel-booking-form .field-group {
+  display: flex;
+  margin: 0;
+  margin-bottom: 40px;
+  height: 50px;
+  background-color: #F2F2F2;
+  color: #000000;
+  font-family: "PT Sans" ,sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+/* подписи к полям въезда и выезда */
+.label-booking {
+  display: flex;
+  align-items: center;
+  width: 155px;
+  background-color:#FFFFFF;;
+}
+
+/* спан с календарем */
+.calendar {
+  background-image: url(/images/modal/date.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-top: 18px;
+  margin-right: 19px;
+  margin-bottom: 17px;
+  margin-left: auto;
+}
+/* инпуты в форме заезда и выезда */
+.form-booking-field {
+  width: 155px;
+  border: none;
+  padding: 0;
+}
+
+/* все инпуты */
+.field {
+  background-color: #F2F2F2;
+}
+/* инпуты в формы указания количества въезжающих */
+.form-number-field {
+  width: 31px;
+  border: none;
+  padding: 0;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+/* кнопка минус */
+.minus {
+  padding: 12px 6px;
+}
+.button-minus,
+.button-plus {
+  border: none;
+  width: 50px;
+}
+/* кнопка плюс */
+.plus {
+  padding: 6px;
+}
+/* кнопка найти в модальном окне */
+.search-button-modal {
+  border: none;
+  width: 575px;
+  height: 60px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  border-radius: 10px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+}
+/* состояние наведения */
+.search-button-modal:hover {
+  background-color: #68A2CA;
+}
+/* состояние фокуса */
+.search-button-modal:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+/* состояние нажатия */
+.search-button-modal:active {
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
 
 }
