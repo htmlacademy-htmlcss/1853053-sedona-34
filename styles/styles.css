@@ -541,6 +541,8 @@ color: rgba(117, 97, 87, 1);
 }
 /* обертка с инпутами */
 .range-wrapper-inputs {
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 20px;
   border: 2px solid #FFFFFF;
   border-radius: 4px;
@@ -558,10 +560,16 @@ color: rgba(117, 97, 87, 1);
 }
 /* лейблы */
 .range-label {
+  display: flex;
+  align-items: center;
   color: rgba(255, 255, 255, 0.3);
   height: 48px;
 }
-
+/* первый лейбл в ранжслайдере */
+.range-label-first {
+  border-right: 2px solid #FFFFFF;
+  padding-right: 15px;
+}
 .range-scale {
   position: relative;
   height: 4px;
