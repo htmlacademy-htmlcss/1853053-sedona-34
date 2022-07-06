@@ -517,6 +517,69 @@ color: rgba(117, 97, 87, 1);
 .filter-hotel-type {
   border: none;
 }
+/* оформление чекбоксов и радиокнопок */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+
+}
+/* чекбоксы */
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 2px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+/* наведение  */
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+/* фокус */
+.control:focus .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;;
+}
+/* нажатие */
+.control:active .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* неактивное состояние */
+.control-input:disabled+.control-mark {
+  outline: #242424;
+}
+/* если выбрана позиция */
+.control-input[type="checkbox"]:checked +.control-mark {
+background-image: url(/images/filtr/tick-checkbox-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* радио */
+.control-input[type="radio"] +.control-mark,
+.control-input[type="radio"]:hover +.control-mark,
+.control-input[type="radio"]:active +.control-mark {
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+/* фокус*/
+.control-input[type="radio"]:focus +.control-mark {
+  outline: 3px solid #83B3D3;
+  background-color: #FFFFFF;
+}
+/* если выбрана позиция */
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(63, 94, 114, 1);
+  border-radius: 50%;
+  content: "";
+}
 /*  форма в фильтре */
 .filter-hotel-form {
   display: flex;
@@ -529,8 +592,9 @@ color: rgba(117, 97, 87, 1);
   min-height: 149px;
   gap: 70px;
 }
+
 /* range-слайдер */
-/* секция слайдера */
+
 .range {
   width: 288px;
 }
@@ -544,7 +608,6 @@ color: rgba(117, 97, 87, 1);
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
-  border: 2px solid #FFFFFF;
   border-radius: 4px;
   height: 48px;
 }
@@ -564,12 +627,34 @@ color: rgba(117, 97, 87, 1);
   align-items: center;
   color: rgba(255, 255, 255, 0.3);
   height: 48px;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
 }
+/* состояние наведения */
+.range-label:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6)
+}
+/* состояние фокуса */
+.range-label:focus {
+  box-shadow: 0 0 0 3px #81B3D2;
+}
+/* активное состояние */
+.range-label:active {
+  background-color: #756257;
+}
+
 /* первый лейбл в ранжслайдере */
 .range-label-first {
-  border-right: 2px solid #FFFFFF;
   padding-right: 15px;
+  padding-left: 12px;
+  border-radius: 4px 0 0 4px;
 }
+.range-label-second {
+  padding-right: 16px;
+  padding-left: 21px;
+  border-radius: 0 4px 4px 0;
+}
+
 .range-scale {
   position: relative;
   height: 4px;
@@ -588,6 +673,17 @@ color: rgba(117, 97, 87, 1);
   height: 20px;
   border-radius: 5px;
   border: none;
+}
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:focus {
+  border: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:active {
+  border: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 .toggle-min {
   top: -8px;
@@ -647,6 +743,18 @@ color: rgba(117, 97, 87, 1);
 .filter-button-reset {
   background: inherit;
   border: none;
+  width: 100px;
+  align-self: center;
+}
+.filter-button-reset:hover {
+  opacity: 0.6;
+}
+.filter-button-reset:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+.filter-button-reset:active {
+  opacity: 0.3;
 }
 /* блок главной сортировки */
 .main-sorting {
