@@ -267,75 +267,75 @@
         </a>
       </footer>
     </div>
-    <div class="modal-container modal-container-close">
-      <div class="modal modal-hotel-booking">
+    <div class="modal-container">
+      <div class="modal modal-auth">
         <button class="modal-close-button">
           <span class="visually-hidden"> Закрыть</span>
         </button>
-        <section class="modal-content">
+        <form class="hotel-booking-form" action="htttp://echo.htmlacademy.ru/"
+        method="post">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="hotel-booking-form" action="htttp://echo.htmlacademy.ru/"
-          method="post">
-          <p class="field-group">
-            <label class="label-booking"" for="booking-arrival">Дата заезда:</label>
-            <input class="form-booking-field field"  type="text"
-            id="booking-arrival" name="booking-arrival"
-            placeholder="Укажите дату">
-            <span class="calendar">
-            </span>
-            </p>
-          <p class="field-group">
-            <label class="label-booking" for="booking-departure">Дата выезда:</label>
-            <input class="form-booking-field field"  type="text"
-            id="booking-departure" name="booking-departure"
-            placeholder="Укажите дату">
-            <span class="calendar">
-            </span>
-          </p>
-          <div class="booking-number-of-entrants">
-            <p class="field-group">
-              <label class="label-booking"  for="booking-adults">Взрослые:</label>
+          <div class="modal-stok">
+            <label class="field-label label-date" for="arrival">Дата заезда:</label>
+            <input class="text-input"  type="text"
+            id="arrival" placeholder="27 апреля 2020">
+            </div>
+            <p class="modal-text modal-text-error">Мы не можем отправить вас в прошлое.</p>
+            <div class="modal-stok">
+              <label class="field-label label-date" for="departure">Дата выезда:</label>
+              <input class="text-input"  type="text"
+              id="departure" placeholder="1 сентября 2021">
+            </div>
+            <p class="modal-text modal-text-success">На эти даты есть свободные номера. Пока есть.</p>
+            <div class="modal-stok-two">
+            <div class="field">
+              <label class="field-label field-label-adult"  for="adult">Взрослые:</label>
+               <span class="field-box">
+                <button class="field-button" type="button">
+                  <svg class="icon-field-number" width="15" height="2" viewBox="0 0 15 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.114258 0L0.114258 2L14.1143 2V0L0.114258 0Z"/>
+                    </svg>
 
-              <button class="button-minus button">
-                <svg class="minus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black"/>
-                  </svg>
-              </button>
-              <input class="form-number-field"  type="text"
-              id="booking-adults" name="booking-adults"
-              placeholder="0">
-              <button class="button-plus button">
-                <svg class="plus" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.3">
-                  <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black"/>
-                  </g>
-                  </svg>
-             </button>
-
-             </p>
-            <p class="field-group">
-              <label  class="label-booking" for="booking-children">Взрослые:</label>
-
-              <button class="button-minus button">
-                <svg class="plus" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black"/>
-                  </svg>
-              </button>
-              <input class="form-number-field"  type="text"
-              id="booking-children" name="booking-children"
-              placeholder="0">
-              <button class="button-plus button">
-                <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.3">
-                  <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black"/>
-                  </g>
-                  </svg>
+                  <span class="visually-hidden">Минус</span>
                 </button>
-             </p>
+                <input class="field-input" id="adult" type="text" placeholder="2">
+                <button class="field-button" type="button">
+                  <svg class="icon-field-number" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+
+                  <span class="visually-hidden">Плюс</span>
+                </button>
+               </span>
+            </div>
+            <div class="field">
+              <label class="field-label field-label-children"  for="children">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-describedby="tooltip-label">
+                  <svg width="1" height="9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z" fill="#fff"/></svg>
+                </button>
+                 <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+
+               <span class="field-box">
+                <button class="field-button" type="button">
+                  <svg class="icon-field-number" width="15" height="2" viewBox="0 0 15 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.114258 0L0.114258 2L14.1143 2V0L0.114258 0Z"/>
+                    </svg>
+                   <span class="visually-hidden">Минус</span>
+                </button>
+                <input class="field-input" id="children" type="text" placeholder="1" name="children">
+                <button class="field-button" type="button">
+                  <svg class="icon-field-number" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  <span class="visually-hidden">Плюс</span>
+                </button>
+               </span>
+            </div>
           </div>
-          <button class="search-button-modal">Найти</button>
+          <button class="search-button-modal" type="submit">Найти</button>
         </form>
-        </section>
       </div>
     </div>
   </body>
