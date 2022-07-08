@@ -90,16 +90,20 @@ body {
 }
 /* элемент списка слева*/
 .nav-list-item{
-  margin-right: 34px;
+  margin-right: 35px;
 }
 /* активное состояние когда юзер находится на странице */
 .nav-list-item-current{
   position: relative;
 }
 .nav-list-item-current::after {
+  position: absolute;
   content: "";
   display: block;
-  border-bottom: 2px solid #756257;
+  background-color:  #756257;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
 }
 /* список навигации справа */
 .nav-list-user {
@@ -118,17 +122,35 @@ body {
   display: block;
   min-width: 18px;
   min-height: 18px;
-  padding: 24px 12px;
+  padding: 22px 12px;
   background-repeat: no-repeat;
   background-position: center;
 }
-/* иконка лупа */
-.nav-link-search {
-  background-image: url(../images/nav/search.svg);
+/* ссылки в навигации -наведение */
+.nav-link:hover {
+  color: #756257;
 }
-/* иконка сердце */
-.nav-link-heart {
-  background-image: url(../images/nav/heart.svg);
+/* нажатия */
+.nav-link:active {
+  color: #7562574d;
+}
+.nav-link-icon-heart {
+  position: absolute;
+  right: 261px;
+  top: 24px;
+}
+.count-badge {
+  position: absolute;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  border-radius: 50%;
+  background-color: #7DB54F;
+  color: #ffffff;
+  padding: 3px 5px;
+  letter-spacing: -0.1em;
+  top: 15px;
+  right: 248px;
 }
 /* кнопка хочу сюда */
 .button-booking {
@@ -144,6 +166,9 @@ body {
   padding: 9px 15px;
   align-self: center;
   width: 160px;
+  height: 37px;
+  box-sizing: border-box;
+  margin-bottom: 6px;
   text-align: center;
 }
 /* кнопки 1 типа- они коричневые-состояния наведение,фокуса */
@@ -167,14 +192,14 @@ background-color: #615048;
   height: 485px;
   background-color: #32728C;
   background-repeat: no-repeat;
-  margin-bottom: 63px;
+  margin-bottom: 59px;
+  top: -4px;
 }
 /* приветственный текс седоны */
 .welcome-plate-text {
   display: block;
-  box-sizing: border-box;
   padding: 0;
-  padding-top: 51px;
+  padding-top: 49px;
   margin: 0 auto;
 }
 /* нижний разделитель */
@@ -212,7 +237,7 @@ margin-bottom: 31px;
 .features {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 91px;
+  margin-bottom: 89px;
 }
 /*содержимое блока с преемуществами */
 .features-content {
@@ -223,6 +248,9 @@ margin-bottom: 31px;
   background-color: rgba(131, 179, 211, 0.12);
   width: 400px;
   height: 384px;
+}
+.search-hotel-content span {
+  padding-right: 15px;
 }
 /* заголовки блока преемуществ */
 .features-title {
@@ -367,7 +395,7 @@ padding: 0 163px;
 .newsletter-title-background {
   color: #FFFFFF;
 }
-/* инпут в форме подписки */
+/* инпут в форме подписки состояние покоя*/
 .newsletter-form-field {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -379,6 +407,21 @@ padding: 0 163px;
   padding-left: 22px;
   border: 0;
   border-radius: 10px 0 0 10px;
+}
+/* состояние наведения */
+.newsletter-form-field:hover {
+  background-color: #E6E6E6;
+}
+/* состояние фокуса */
+.newsletter-form-field:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+.newsletter-form-field:active {
+  background-color: #ffffff;
+  outline: 2px solid #000000;
+  border-radius: 4px;
 }
 /* форма в блоке подписки */
 .newsletter-form {
@@ -396,6 +439,7 @@ padding: 0 163px;
   background-color: #82B3D3;
   width: 200px;
   padding: 0;
+  padding-top: 13px;
   border: 0;
   border-radius: 0 10px 10px 0;
 }
@@ -440,6 +484,7 @@ color: rgba(255, 255, 255, 0.3);
 /* состояние покоя  */
 .footer-social-link {
   color: #83B3D3;
+  padding-top: 15px;
 }
 /* состояние наведения и фокуса */
 .footer-social-link:hover,
@@ -456,6 +501,8 @@ color: rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  padding-top: 11px;
+  padding-left: 3px;
 }
 
 .footer-telephone-link:hover,
@@ -468,6 +515,7 @@ color: rgba(255, 255, 255, 0.3);
 /* логотип HTML */
 .footer-logo-htmlacademy {
   color:rgba(0, 0, 0, 1) ;
+  padding-top: 17px;
 }
 .footer-logo-htmlacademy:hover,
 .footer-logo-htmlacademy:focus {
@@ -553,7 +601,7 @@ color: rgba(117, 97, 87, 1);
 }
 /* если выбрана позиция */
 .control-input[type="checkbox"]:checked +.control-mark {
-background-image: url(/images/filtr/tick-checkbox-2.svg);
+background-image: url(/images/filtr/tick-checkbox.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -606,20 +654,20 @@ background-image: url(/images/filtr/tick-checkbox-2.svg);
 /* обертка с инпутами */
 .range-wrapper-inputs {
   display: flex;
-  justify-content: space-around;
+
   margin-bottom: 20px;
   border-radius: 4px;
   height: 48px;
 }
 /* сами инпуты */
 .range-input {
-  width: 90px;
   font: inherit;
   padding: 0;
   background-color: transparent;
   color: #FFFFFF;
-  border: none;
-  appearance: textfield;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  width: 145px;
 }
 /* лейблы */
 .range-label {
@@ -627,31 +675,32 @@ background-image: url(/images/filtr/tick-checkbox-2.svg);
   align-items: center;
   color: rgba(255, 255, 255, 0.3);
   height: 48px;
-  border: 2px solid #FFFFFF;
-  box-sizing: border-box;
 }
 /* состояние наведения */
-.range-label:hover {
+.range-input:hover {
   border: 2px solid rgba(255, 255, 255, 0.6)
 }
 /* состояние фокуса */
-.range-label:focus {
+.range-input:focus {
   box-shadow: 0 0 0 3px #81B3D2;
 }
 /* активное состояние */
-.range-label:active {
+.range-input:active {
   background-color: #756257;
 }
 
 /* первый лейбл в ранжслайдере */
-.range-label-first {
-  padding-right: 15px;
-  padding-left: 12px;
+.range-input-first {
+  padding: 14px 14px 13px 19px;
   border-radius: 4px 0 0 4px;
 }
-.range-label-second {
-  padding-right: 16px;
-  padding-left: 21px;
+/* текст до */
+.range-label-text {
+  position: absolute;
+  padding-left: 115px;
+}
+.range-input-second {
+  padding: 14px 16px 13px 17px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -776,7 +825,7 @@ background-image: url(/images/filtr/tick-checkbox-2.svg);
   text-transform: uppercase;
   margin: 0;
 }
-/* селекты в каталоге- они одинаковые по оформлению текста*/
+/* селекты в каталоге- они одинаковые по оформлению текста-покой*/
 .select {
   font-size: 18px;
   color: #333333;
@@ -787,6 +836,23 @@ background-image: url(/images/filtr/tick-checkbox-2.svg);
   background-image: url(/images/hotels/arrow-to-down.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
+}
+/* состояния наведение, фокуса*/
+.select:hover,
+.select:focus {
+  border: 2px solid #68A2CA;
+  border-radius: 4px;
+}
+/* состояние нажатия */
+.select:active {
+  border: 2px solid #3F5E72;
+  border-radius: 4px;
+}
+/* выключенное состояние */
+.select:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.3);
 }
 .assortment-hotel-select {
   width: 290px;
@@ -1261,4 +1327,8 @@ padding-right: 43px;
 .search-button-modal:active {
   background-color: #68A2CA;
   color: rgba(255, 255, 255, 0.3);
+}
+/* закрытие модального окна */
+.modal-container-close {
+  display: none;
 }
