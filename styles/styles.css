@@ -526,6 +526,8 @@ color: rgba(117, 97, 87, 1);
 }
  /* блок фильтр в каталоге */
   .filter{
+    position: relative;
+    top: -5px;
     background-image: url(../images/filtr/catalog-background.jpg);
     background-repeat: no-repeat;
     background-color: #32728C;
@@ -538,13 +540,14 @@ color: rgba(117, 97, 87, 1);
   line-height: 78px;
   margin: 0;
   margin-bottom: 10px;
+  padding-left: 3px;
 }
 /* список хлебных крошек */
 .breadcrumbs {
   display: flex;
   list-style-type: none;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
   padding: 0;
  }
 /* хлебная крошка гостиницы */
@@ -553,6 +556,10 @@ color: rgba(117, 97, 87, 1);
   line-height: 21px;
   margin-right: 10px;
 }
+ /* хлебная крошка домик */
+.breadcrumbs-item-home {
+  padding-left: 2px;
+}
 /* заголовки списков в фильтре */
 .filter-hotel-title {
   font-size: 20px;
@@ -560,6 +567,7 @@ color: rgba(117, 97, 87, 1);
   font-weight: 700;
   text-transform: capitalize;
   margin-bottom: 30px;
+  padding-left: 1px;
 }
 /* филдсеты в фильтре */
 .filter-hotel-type {
@@ -649,13 +657,12 @@ background-image: url(/images/filtr/tick-checkbox.svg);
 /* название */
 .filter-hotel-title-range {
   padding: 0;
-  margin-bottom: 55px;
+  margin-bottom: 36px;
 }
 /* обертка с инпутами */
 .range-wrapper-inputs {
   display: flex;
-
-  margin-bottom: 20px;
+  margin-bottom: 29px;
   border-radius: 4px;
   height: 48px;
 }
@@ -667,14 +674,14 @@ background-image: url(/images/filtr/tick-checkbox.svg);
   color: #FFFFFF;
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
-  width: 145px;
+  width: 143px;
 }
 /* лейблы */
 .range-label {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.3);
-  height: 48px;
+  height: 45px;
 }
 /* состояние наведения */
 .range-input:hover {
@@ -691,16 +698,21 @@ background-image: url(/images/filtr/tick-checkbox.svg);
 
 /* первый лейбл в ранжслайдере */
 .range-input-first {
-  padding: 14px 14px 13px 19px;
+  padding: 14px 14px 13px 16px;
   border-radius: 4px 0 0 4px;
 }
 /* текст до */
 .range-label-text {
   position: absolute;
-  padding-left: 115px;
+}
+.range-label-text-min {
+  padding-left: 113px;
+}
+.range-label-text-max {
+  padding-left: 108px;
 }
 .range-input-second {
-  padding: 14px 16px 13px 17px;
+  padding: 14px 16px 13px 15px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -740,7 +752,7 @@ background-image: url(/images/filtr/tick-checkbox.svg);
 }
 .toggle-max {
   top: -8px;
-  right: 78px;
+  right: 52px;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -757,6 +769,7 @@ background-image: url(/images/filtr/tick-checkbox.svg);
 .filter-hotel-list {
   margin: 0;
   padding: 0;
+  padding-left: 2px;
   list-style-type: none;
 }
 /* элемент списка фильтра */
@@ -770,9 +783,11 @@ background-image: url(/images/filtr/tick-checkbox.svg);
   margin-left: auto;
   justify-content: flex-end;
   gap: 20px;
+  padding-top: 62px;
 }
 /* кнопки в фильтре */
 .filter-button {
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
@@ -794,6 +809,7 @@ background-image: url(/images/filtr/tick-checkbox.svg);
   border: none;
   width: 100px;
   align-self: center;
+  padding-left: 8px;
 }
 .filter-button-reset:hover {
   opacity: 0.6;
@@ -807,7 +823,7 @@ background-image: url(/images/filtr/tick-checkbox.svg);
 }
 /* блок главной сортировки */
 .main-sorting {
-  padding: 50px 72px ;
+  padding: 43px 72px ;
   margin-bottom: 25px;
 }
 /* секция с сортировкой по популярности и формой вывода на экран */
@@ -824,18 +840,22 @@ background-image: url(/images/filtr/tick-checkbox.svg);
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
+  padding-top: 15px;
+  margin-right: 162px;
 }
 /* селекты в каталоге- они одинаковые по оформлению текста-покой*/
 .select {
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   color: #333333;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   appearance: none;
-  padding: 14px 79px 14px 20px;
+
   background-image: url(/images/hotels/arrow-to-down.svg);
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 18px center;
+  height: 49px;
 }
 /* состояния наведение, фокуса*/
 .select:hover,
@@ -856,6 +876,9 @@ background-image: url(/images/filtr/tick-checkbox.svg);
 }
 .assortment-hotel-select {
   width: 290px;
+  padding: 9px 79px 7px 18px;
+  background-position: right 18px top 20px;
+  margin-top: 3px;
 }
 .hotel-number-select {
   width: 160px;
@@ -863,7 +886,7 @@ background-image: url(/images/filtr/tick-checkbox.svg);
 .assortment-hotel-button-flex {
   display: flex;
   gap: 8px;
-  margin-left: 78px;
+  margin-left: 35px;
 }
 /* секция с выбором показа на экран-состояние покоя */
 .assortment-hotel-button {
