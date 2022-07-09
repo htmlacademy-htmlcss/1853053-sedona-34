@@ -78,7 +78,7 @@ body {
   text-transform: capitalize;
   padding: 20px 0;
   display: block;
-  }
+}
 /* список навигации слева */
 .nav-list {
   display: flex;
@@ -89,7 +89,7 @@ body {
   list-style-type: none;
 }
 /* элемент списка слева*/
-.nav-list-item{
+.nav-list-item {
   margin-right: 35px;
 }
 /* активное состояние когда юзер находится на странице */
@@ -204,9 +204,9 @@ background-color: #615048;
 }
 /* нижний разделитель */
 .welcome-plate-divider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 /* блок о седоне */
 .about {
@@ -382,7 +382,7 @@ margin-bottom: 31px;
   min-height: 52px;
   margin: 0;
   margin-bottom: 45px;
-padding: 0 163px;
+  padding: 0 163px;
 }
 /* блок с формой подпиской с фоновым изображением */
 .newsletter-background {
@@ -525,14 +525,14 @@ color: rgba(117, 97, 87, 1);
   color:rgba(117, 97, 87, 0.3) ;
 }
  /* блок фильтр в каталоге */
-  .filter{
-    position: relative;
-    top: -5px;
-    background-image: url(../images/filtr/catalog-background.jpg);
-    background-repeat: no-repeat;
-    background-color: #32728C;
-    color: #FFFFFF;
-    padding: 35px 70px 70px 70px;
+.filter{
+  position: relative;
+  top: -5px;
+  background-image: url(../images/filtr/catalog-background.jpg);
+  background-repeat: no-repeat;
+  background-color: #32728C;
+  color: #FFFFFF;
+  padding: 35px 70px 70px 70px;
   }
 /*заголовок гостиницы Седоны */
 .main-inner-title {
@@ -609,9 +609,9 @@ color: rgba(117, 97, 87, 1);
 }
 /* если выбрана позиция */
 .control-input[type="checkbox"]:checked +.control-mark {
-background-image: url(/images/filtr/tick-checkbox.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+ background-image: url(/images/filtr/tick-checkbox.svg);
+ background-repeat: no-repeat;
+ background-position: center;
 }
 /* радио */
 .control-input[type="radio"] +.control-mark,
@@ -648,9 +648,7 @@ background-image: url(/images/filtr/tick-checkbox.svg);
   min-height: 149px;
   gap: 70px;
 }
-
 /* range-слайдер */
-
 .range {
   width: 288px;
 }
@@ -715,7 +713,6 @@ background-image: url(/images/filtr/tick-checkbox.svg);
   padding: 14px 16px 13px 15px;
   border-radius: 0 4px 4px 0;
 }
-
 .range-scale {
   position: relative;
   height: 4px;
@@ -725,7 +722,6 @@ background-image: url(/images/filtr/tick-checkbox.svg);
   position: absolute;
   background-color:  #FFFFFF;
   height: 4px;
-
 }
 /* кнопки range-слайдера */
 .range-toggle {
@@ -851,7 +847,6 @@ background-image: url(/images/filtr/tick-checkbox.svg);
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   appearance: none;
-
   background-image: url(/images/hotels/arrow-to-down.svg);
   background-repeat: no-repeat;
   background-position: right 18px center;
@@ -978,13 +973,13 @@ background-color: #7DB54F;
 }
 .hotel-button-in-favorites:hover,
 .hotel-button-in-favorites:focus {
-  background-color: #6C9E42;
+background-color: #6C9E42;
 }
 .hotel-button-in-favorites:active {
-  color: rgba(255, 255, 255, 0.3);
+color: rgba(255, 255, 255, 0.3);
 }
 .hotel-button-in-favorites:disabled {
-  background-color: #E5E5E5;
+background-color: #E5E5E5;
 }
 /* текс рейтинга */
 .hotel-rating {
@@ -1025,7 +1020,7 @@ background-color: #7DB54F;
 }
 /* элемент списка в пагинации */
 .pagination-item:not(:last-child) {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 /* ссылки в пагинации-состояние покоя*/
 .pagination-link {
