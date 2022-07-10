@@ -1095,8 +1095,8 @@ background-color: #E5E5E5;
 /* модальное окно */
 /* модальный контейнер где находится модальное окно */
 .modal-container {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 399px;
   left: 0;
   display: flex;
   width: 100%;
@@ -1122,7 +1122,7 @@ background-color: #E5E5E5;
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 54px;
+  top: 53px;
   right: 70px;
   width: 53px;
   height: 53px;
@@ -1151,7 +1151,7 @@ background-color: #E5E5E5;
 /* заголовок модального окна */
 .modal-title {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 59px;
   font-weight: 700;
   font-size: 30px;
   line-height: 40px;
@@ -1166,7 +1166,7 @@ background-color: #E5E5E5;
 .modal-stok {
   display: flex;
   height: 50px;
-
+  margin-bottom: 8px;
 }
 /* подписи в модальном окне */
 .field-label {
@@ -1180,19 +1180,20 @@ background-color: #E5E5E5;
 /* подписи секции вьезда и выезда */
 .label-date {
   width: 155px;
-  padding-right: 42px;
+  padding-left: 2px;
 }
 /* инпуты в заезде выезде */
 .text-input {
+  font: inherit;
   flex-grow: 1;
-  padding: 0;
-  padding-left: 15px;
+  padding: 16px;
+  padding-left: 20px;
   border: none;
   background-color: #F2F2F2;
   border-radius: 4px;
   background-image: url(/images/modal/date.svg);
   background-repeat: no-repeat;
-  background-position-x: 343px;
+  background-position-x: 387px;
   background-position-y: 19px;
 }
 .text-input:hover {
@@ -1214,7 +1215,9 @@ background-color: #E5E5E5;
 }
 /* текст в модальном окне */
 .modal-text {
-  margin-left: 197px;
+  margin: 0;
+  margin-bottom: 11px;
+  margin-left: 158px;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -1238,11 +1241,12 @@ background-color: #E5E5E5;
 }
 /* подпись взрослые */
 .field-label-adult {
-  padding-right: 64px;
+  padding-right: 66px;
+  padding-left: 4px;
 }
 /* подпись дети */
 .field-label-children {
-padding-right: 43px;
+padding-right: 50px;
 }
 /* секция кнопки с плюсом и минусом */
 .field-box {
@@ -1279,6 +1283,7 @@ padding-right: 43px;
 }
 /* инпут в числовом выборе */
 .field-input {
+  font: inherit;
   border: none;
   padding: 0;
 }
@@ -1295,8 +1300,8 @@ padding-right: 43px;
   position: absolute;
   width: 25px;
   height: 25px;
-  margin-top: 12px;
-  margin-left: 55px;
+  margin-top: 14px;
+  margin-left: 53px;
 }
 .tooltip-toggle {
   border: none;
@@ -1311,6 +1316,7 @@ padding-right: 43px;
   border-radius: 50%;
 }
 .tooltip-text {
+  box-sizing: border-box;
   background-color: #333333;
   color: #ffffff;
   font-size: 16px;
@@ -1322,7 +1328,7 @@ padding-right: 43px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);;
   width: 256px;
   position: absolute;
-  top: 44px;
+  top: 41px;
   left: 50%;
   transform: translateX(-50%);
   display: none;
@@ -1335,7 +1341,7 @@ padding-right: 43px;
   width: 19px;
   position: absolute;
   top: -9px;
-  left: 140px;
+  left: 119px;
 }
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
@@ -1355,6 +1361,7 @@ padding-right: 43px;
   background-color: #83B3D3;
   border-radius: 10px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  margin-left: 2px;
 }
 /* состояние наведения */
 .search-button-modal:hover {
@@ -1373,4 +1380,13 @@ padding-right: 43px;
 /* закрытие модального окна */
 .modal-container-close {
   display: none;
+}
+/* убрать лишние стрелки в number */
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
