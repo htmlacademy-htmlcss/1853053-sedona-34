@@ -27,6 +27,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -52,6 +53,7 @@ body {
 /* навигация в шапке */
 .nav {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   padding: 0 70px;
 }
@@ -62,6 +64,7 @@ body {
   width: 139px;
   height: 70px;
   margin-right: 47px;
+  cursor: pointer;
 }
 /* изображение логотипа */
 .img-logo {
@@ -93,7 +96,7 @@ body {
   margin-right: 35px;
 }
 /* активное состояние когда юзер находится на странице */
-.nav-list-item-current{
+.nav-list-item-current {
   position: relative;
 }
 .nav-list-item-current::after {
@@ -101,7 +104,7 @@ body {
   content: "";
   display: block;
   background-color:  #756257;
-  bottom: 0;
+  bottom: 5px;
   width: 100%;
   height: 2px;
 }
@@ -134,13 +137,15 @@ body {
 .nav-link:active {
   color: #7562574d;
 }
-.nav-link-icon-heart {
-  position: absolute;
-  right: 261px;
-  top: 24px;
+.nav-link-heart {
+  position: relative;
 }
-.count-badge {
+.nav-link-heart::after {
+  content: "12";
+  top: 15px;
+  right: -1px;
   position: absolute;
+  display: block;
   font-weight: 400;
   font-size: 10px;
   line-height: 13px;
@@ -149,8 +154,6 @@ body {
   color: #ffffff;
   padding: 3px 5px;
   letter-spacing: -0.1em;
-  top: 15px;
-  right: 248px;
 }
 /* кнопка хочу сюда */
 .button-booking {
@@ -166,10 +169,13 @@ body {
   padding: 9px 15px;
   align-self: center;
   width: 160px;
-  height: 37px;
   box-sizing: border-box;
   margin-bottom: 6px;
   text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* кнопки 1 типа- они коричневые-состояния наведение,фокуса */
 .button-first:hover,
@@ -329,6 +335,7 @@ body {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
+  padding: 0 165px;
 }
 /* текст после вопроса Заинтересовались */
 .search-hotel-content {
@@ -378,8 +385,6 @@ body {
   margin: 0;
   margin-bottom: 29px;
 }
-
-
 /* Обещантие что никакого спама */
 .newsletter-text {
   font-size: 22px;
@@ -404,18 +409,27 @@ body {
 .newsletter-title-background {
   color: #FFFFFF;
 }
-/* инпут в форме подписки состояние покоя*/
+/* лейбел в форме подписки состояние покоя*/
+.newsletter-form-label {
+  flex-grow: 1;
+  padding: 0;
+  border: 0;
+  border-radius: 10px 0 0 10px;
+}
+/* инпут в форме подписки */
 .newsletter-form-field {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
-  flex-grow: 1;
-  padding: 0;
+  width: 100%;
+  height: 100%;
   padding-left: 22px;
-  border: 0;
   border-radius: 10px 0 0 10px;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
 }
 /* состояние наведения */
 .newsletter-form-field:hover {
@@ -425,13 +439,16 @@ body {
 .newsletter-form-field:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
-  border-radius: 4px;
+  border-radius: 10px 0 0 10px;
 }
-.newsletter-form-field:active {
+/* активное состояние */
+.newsletter-form-field:active,
+.newsletter-form-field:not(:placeholder-shown) {
   background-color: #ffffff;
   outline: 2px solid #000000;
-  border-radius: 4px;
+  border-radius: 10px 0 0 10px;
 }
+
 .newsletter-form-field:disabled {
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px
@@ -439,7 +456,7 @@ body {
 /* форма в блоке подписки */
 .newsletter-form {
   display: flex;
-  height: 60px;
+  min-height: 60px;
   margin-bottom: 0;
 }
 /* кнопка подписаться */
@@ -456,6 +473,7 @@ body {
   padding-top: 4px;
   border: 0;
   border-radius: 0 10px 10px 0;
+  cursor: pointer;
 }
 /* кнопки второго типа-они голубые-их состояния */
 .button-second:hover,
@@ -471,9 +489,10 @@ body {
 /* подвал */
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 70px;
-  height: 120px;
+  min-height: 120px;
   align-items: center;
 }
 /* список с социальными списками */
@@ -510,6 +529,7 @@ body {
 }
 /* телефон */
 .footer-telephone-link {
+  font: inherit;
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
@@ -539,7 +559,7 @@ color: rgba(117, 97, 87, 1);
   color:rgba(117, 97, 87, 0.3) ;
 }
  /* блок фильтр в каталоге */
-.filter{
+.filter {
   position: relative;
   top: -5px;
   background-image: url(../images/filtr/catalog-background.jpg);
@@ -559,6 +579,7 @@ color: rgba(117, 97, 87, 1);
 /* список хлебных крошек */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   margin-bottom: 39px;
@@ -568,11 +589,23 @@ color: rgba(117, 97, 87, 1);
 .breadcrumbs-item {
   font-size: 16px;
   line-height: 21px;
-  margin-right: 10px;
+  margin-right: 24px;
 }
  /* хлебная крошка домик */
 .breadcrumbs-item-home {
   padding-left: 2px;
+  position: relative;
+}
+/* стрелочка направо */
+.breadcrumbs-item-home::after {
+  content: "";
+  background-image: url(/images/filtr/arrow-right.svg);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 21px;
+  position: absolute;
+  top: 6px;
+  left: 23px;
 }
 /* заголовки списков в фильтре */
 .filter-hotel-title {
@@ -592,7 +625,7 @@ color: rgba(117, 97, 87, 1);
   position: relative;
   display: block;
   padding-left: 39px;
-
+  cursor: pointer;
 }
 /* чекбоксы */
 .control-mark {
@@ -623,7 +656,7 @@ color: rgba(117, 97, 87, 1);
 }
 /* если выбрана позиция */
 .control-input[type="checkbox"]:checked + .control-mark {
- background-image: url(/images/filtr/tick-checkbox.svg);
+ background-image: url(../images/filtr/tick-checkbox.svg);
  background-repeat: no-repeat;
  background-position: center;
 }
@@ -669,7 +702,7 @@ color: rgba(117, 97, 87, 1);
 /* название */
 .filter-hotel-title-range {
   padding: 0;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 }
 /* обертка с инпутами */
 .range-wrapper-inputs {
@@ -678,22 +711,31 @@ color: rgba(117, 97, 87, 1);
   border-radius: 4px;
   height: 48px;
 }
-/* сами инпуты */
-.range-input {
-  font: inherit;
-  padding: 0;
-  background-color: transparent;
-  color: #FFFFFF;
-  border: 2px solid #FFFFFF;
-  box-sizing: border-box;
-  width: 143px;
-}
 /* лейблы */
 .range-label {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.3);
   height: 45px;
+  cursor: pointer;
+}
+/* сами инпуты-состояние покоя */
+.range-input{
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  width: 143px;
+  outline: none;
+  cursor: pointer;
+}
+.range-input::placeholder {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
 }
 /* состояние наведения */
 .range-input:hover {
@@ -706,8 +748,21 @@ color: rgba(117, 97, 87, 1);
 /* активное состояние */
 .range-input:active {
   background-color: #756257;
+  box-shadow: none;
 }
-/* неактивное состояние */
+ .range-input:not(:placeholder-shown) {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: #756257;
+  box-shadow: none;
+  box-sizing: border-box;
+  height: 48px;
+}
+ /* неактивное состояние */
 .range-input:disabled {
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
@@ -730,6 +785,10 @@ color: rgba(117, 97, 87, 1);
 .range-input-second {
   padding: 14px 41px 13px 15px;
   border-radius: 0 4px 4px 0;
+  border-left: none;
+}
+.range-input-second:hover {
+  border-left: none;
 }
 .range-scale {
   position: relative;
@@ -748,6 +807,7 @@ color: rgba(117, 97, 87, 1);
   height: 20px;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 }
 .range-toggle:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -778,6 +838,9 @@ color: rgba(117, 97, 87, 1);
 .filter-hotel-type {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 160px;
 }
 /* списки в фильтре */
 .filter-hotel-list {
@@ -806,13 +869,14 @@ color: rgba(117, 97, 87, 1);
   line-height: 20px;
   text-decoration: none;
   color: #FFFFFF;
+  cursor: pointer;
 }
 /* кнопка применить */
 .filter-button-apply {
   font-weight: 700;
   text-transform: uppercase;
   background-color: #82B3D3;
-  min-width: 160px;
+  width: 160px;
   min-height: 48px;
   border: none;
   border-radius: 4px;
@@ -864,10 +928,11 @@ color: rgba(117, 97, 87, 1);
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   appearance: none;
-  background-image: url(/images/hotels/arrow-to-down.svg);
+  background-image: url(../images/hotels/arrow-to-down.svg);
   background-repeat: no-repeat;
   background-position: right 20px top 16px;
   height: 49px;
+  cursor: pointer;
 }
 /* состояния наведение, фокуса*/
 .select:hover,
@@ -901,6 +966,7 @@ color: rgba(117, 97, 87, 1);
 }
 .assortment-hotel-button-flex {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding-top: 5px;
 }
@@ -952,7 +1018,10 @@ color: rgba(117, 97, 87, 1);
 .hotel {
   padding-left: 2px;
 }
-
+/* ссылка-название */
+.hotel-title-link {
+  cursor: pointer;
+}
 /* Названия гостиниц */
 .hotel-title {
   font-size: 24px;
@@ -1019,8 +1088,10 @@ color: rgba(117, 97, 87, 1);
   color: #333333;
   margin: 0;
   background-color: #f2f2f2;
-  padding: 9px 23px 9px 15px;
+  padding: 9px 23px 9px 21px;
   border-radius: 4px;
+  width: 140px;
+  box-sizing: border-box;
 }
 /*  звезды */
 .star {
@@ -1043,6 +1114,7 @@ color: rgba(117, 97, 87, 1);
 /* Блок пагинации */
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .pagination-list {
@@ -1053,7 +1125,6 @@ color: rgba(117, 97, 87, 1);
   gap: 8px;
   padding-left: 1px;
 }
-
 /* ссылки в пагинации-состояние покоя*/
 .pagination-link {
   display: block;
@@ -1099,6 +1170,7 @@ color: rgba(117, 97, 87, 1);
 /* количество гостиниц на странице */
 .hotel-number {
   display: flex;
+  flex-wrap: wrap;
 }
 /* модальное окно */
 /* модальный контейнер где находится модальное окно */
@@ -1211,9 +1283,10 @@ color: rgba(117, 97, 87, 1);
   background-color:  #E6E6E6;
   outline: 3px solid #83B3D3;
 }
-.text-input:active {
+.text-input:active,
+.text-input:not(:placeholder-shown) {
   background-color: #FFFFFF;
-  outline: 2px solid #000000;;
+  outline: 2px solid #000000;
 }
 .text-input::placeholder {
   font-weight: 400;
@@ -1390,11 +1463,11 @@ color: rgba(117, 97, 87, 1);
   display: none;
 }
 /* убрать лишние стрелки в number */
-input[type="number"] {
+.input-number {
   -moz-appearance:textfield;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
