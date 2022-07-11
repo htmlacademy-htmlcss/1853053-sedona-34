@@ -656,7 +656,7 @@ color: rgba(117, 97, 87, 1);
 }
 /* если выбрана позиция */
 .control-input[type="checkbox"]:checked + .control-mark {
- background-image: url(/images/filtr/tick-checkbox.svg);
+ background-image: url(../images/filtr/tick-checkbox.svg);
  background-repeat: no-repeat;
  background-position: center;
 }
@@ -928,7 +928,7 @@ color: rgba(117, 97, 87, 1);
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   appearance: none;
-  background-image: url(/images/hotels/arrow-to-down.svg);
+  background-image: url(../images/hotels/arrow-to-down.svg);
   background-repeat: no-repeat;
   background-position: right 20px top 16px;
   height: 49px;
