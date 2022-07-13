@@ -548,7 +548,6 @@ body {
   padding-top: 11px;
   padding-left: 3px;
 }
-
 .footer-telephone-link:hover,
 .footer-telephone-link:focus {
   color: rgba(117, 97, 87, 1);
@@ -921,7 +920,7 @@ color: rgba(117, 97, 87, 1);
   opacity: 0.3;
 }
 .filter-button-reset:focus-visible {
-outline: none;
+  outline: none;
 }
 /* блок главной сортировки */
 .main-sorting {
