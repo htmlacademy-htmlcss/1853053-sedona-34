@@ -766,7 +766,7 @@ color: rgba(117, 97, 87, 1);
   box-shadow: none;
 }
  .range-input:not(:placeholder-shown) {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans',sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
