@@ -577,7 +577,7 @@ color: rgba(117, 97, 87, 1);
 .filter {
   position: relative;
   top: -5px;
-  background-image: url(../images/filtr/catalog-background.jpg);
+  background-image: url(../images/filter/catalog-background.jpg);
   background-repeat: no-repeat;
   background-color: #32728C;
   color: #FFFFFF;
@@ -614,7 +614,7 @@ color: rgba(117, 97, 87, 1);
 /* стрелочка направо */
 .breadcrumbs-item-home::after {
   content: "";
-  background-image: url(/images/filtr/arrow-right.svg);
+  background-image: url(/images/filter/arrow-right.svg);
   background-repeat: no-repeat;
   width: 10px;
   height: 21px;
@@ -671,7 +671,7 @@ color: rgba(117, 97, 87, 1);
 }
 /* если выбрана позиция */
 .control-input[type="checkbox"]:checked + .control-mark {
- background-image: url(../images/filtr/tick-checkbox.svg);
+ background-image: url(../images/filter/tick-checkbox.svg);
  background-repeat: no-repeat;
  background-position: center;
 }
@@ -1131,7 +1131,7 @@ color: rgba(117, 97, 87, 1);
 }
 /*  звезды */
 .star {
-  background-image: url(../images/filtr/star.svg);
+  background-image: url(../images/filter/star.svg);
   background-repeat: no-repeat;
   width: 18px;
   height: 17px;
