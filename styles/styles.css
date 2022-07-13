@@ -746,7 +746,7 @@ color: rgba(117, 97, 87, 1);
   cursor: pointer;
 }
 .range-input::placeholder {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
