@@ -270,10 +270,14 @@ body {
   margin: 0;
   margin-bottom: 30px;
 }
-/* спани внутри блоков преемуществ */
-.features-content span {
+/* спаны внутри блоков преемуществ */
+.search-hotel-content-span {
   display: block;
   margin-bottom: 30px;
+}
+.features-text-span {
+  display: block;
+  padding-right: 7px;
 }
 /* текст блока преемуществ */
 .features-text {
@@ -676,16 +680,22 @@ color: rgba(117, 97, 87, 1);
  background-position: center;
 }
 /* радио */
-.control-input[type="radio"] + .control-mark,
-.control-input[type="radio"]:hover + .control-mark,
-.control-input[type="radio"]:active + .control-mark {
+.control-input[type="radio"] + .control-mark {
   border-radius: 50%;
   background-color: #FFFFFF;
+}
+/* наведение */
+.control-input[type="radio"]:hover + .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 /* фокус*/
 .control-input[type="radio"]:focus + .control-mark {
   outline: 3px solid #83B3D3;
   background-color: #FFFFFF;
+}
+/* нажатие */
+.control-input[type="radio"]:active + .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 /* если выбрана позиция */
 .control-input[type="radio"]:checked + .control-mark::before {
