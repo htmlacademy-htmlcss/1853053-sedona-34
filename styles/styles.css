@@ -270,7 +270,8 @@ body {
   margin: 0;
   margin-bottom: 30px;
 }
-/* спаны внутри блоков преемуществ */
+/* спаны внутри блоков преемуществ поиска гостиниц*/
+.features-number,
 .search-hotel-content-span {
   display: block;
   margin-bottom: 30px;
