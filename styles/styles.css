@@ -93,6 +93,7 @@ body {
 /* элемент списка слева*/
 .nav-list-item {
   margin-right: 35px;
+  flex-shrink: 1;
 }
 /* активное состояние когда юзер находится на странице */
 .nav-list-item-current {
@@ -118,6 +119,7 @@ body {
   max-width: 264px;
   padding: 0;
   list-style-type: none;
+  flex-shrink: 1;
 }
 /* ссылки списка справа-иконки*/
 .nav-link-user {
@@ -175,6 +177,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 1;
 }
 /* кнопки 1 типа- они коричневые-состояния наведение,фокуса */
 .button-first:hover,
@@ -255,7 +258,7 @@ body {
   color: #333333;
   background-color: rgba(131, 179, 211, 0.12);
   width: 400px;
-  height: 384px;
+  min-height: 384px;
 }
 .search-hotel-content span {
   padding-right: 15px;
@@ -828,6 +831,8 @@ color: rgba(117, 97, 87, 1);
   position: absolute;
   background-color:  #FFFFFF;
   height: 4px;
+  left: 0;
+  width: 220px;
 }
 /* кнопки range-слайдера */
 .range-toggle {
