@@ -731,12 +731,12 @@ color: rgba(117, 97, 87, 1);
 /* название */
 .filter-hotel-title-range {
   padding: 0;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 /* обертка с инпутами */
 .range-wrapper-inputs {
   display: flex;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
   border-radius: 4px;
   height: 48px;
 }
@@ -801,7 +801,7 @@ color: rgba(117, 97, 87, 1);
 }
 /* первый лейбл в ранжслайдере */
 .range-input-first {
-  padding: 14px 34px 13px 16px;
+  padding: 14px 34px 13px 17px;
   border-radius: 4px 0 0 4px;
 }
 /* текст до */
@@ -815,7 +815,7 @@ color: rgba(117, 97, 87, 1);
   padding-left: 108px;
 }
 .range-input-second {
-  padding: 14px 41px 13px 15px;
+  padding: 14px 41px 13px 17px;
   border-radius: 0 4px 4px 0;
   border-left: none;
 }
@@ -1075,7 +1075,7 @@ color: rgba(117, 97, 87, 1);
   font-size: 24px;
   line-height: 28px;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 /* состояние на */
 /* гостиница-цена */
@@ -1169,6 +1169,7 @@ color: rgba(117, 97, 87, 1);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 3px;
 }
 .pagination-list {
   display: flex;
